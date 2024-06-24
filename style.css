@@ -45,3 +45,78 @@ tr:last-child td {
     padding: 10px 0px;
   }
 }
+
+/* Business Software section style */
+.Business-content {
+  max-width: 1168px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Inter", sans-serif;
+  height: 100%;
+}
+
+.Business-Software {
+  height: 100vh;
+  position: relative;
+  background-color: #0060B4;
+}
+
+.Business-Software::after {
+  content: "";
+    background-image: url(./image/bg-image.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    width: 55%;
+    opacity: 1;
+    height: 100%;
+    position: absolute;
+    right: 80px;
+    top: 0;
+    background-position: right bottom;
+}
+
+.business-group {
+  width: 50%;
+  height: 100% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.business-group-inner{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.business-group-inner>h1 {
+  font-size: 52px;
+  font-weight: 400;
+}
+.counters-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.counter-box{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+}
+.counter{
+  font-size: 52px;
+  font-weight: 400;
+}
+.counter-label{
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.counter-box button {
+  border: 2px solid white;
+  background-color: transparent;
+padding: 10px 25px;
+font-size: 20px;
+color: white;
+}
