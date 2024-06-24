@@ -33,7 +33,7 @@ tr:last-child td {
   border-bottom: none; /* Remove border from the last row */
   padding-bottom: 0px;
 }
-@media screen and (min-width: 0px) and (max-width: 580px) {
+/* @media screen and (min-width: 0px) and (max-width: 580px) {
   .table-container {
     margin: 0px 5px;
   }
@@ -44,7 +44,7 @@ tr:last-child td {
   td {
     padding: 10px 0px;
   }
-}
+} */
 
 /* Business Software section style */
 .Business-content {
@@ -59,64 +59,114 @@ tr:last-child td {
 .Business-Software {
   height: 100vh;
   position: relative;
-  background-color: #0060B4;
+  background-color: #0060b4;
 }
 
 .Business-Software::after {
   content: "";
-    background-image: url(./image/bg-image.png);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    width: 55%;
-    opacity: 1;
-    height: 100%;
-    position: absolute;
-    right: 80px;
-    top: 0;
-    background-position: right bottom;
+  background-image: url(./image/bg-image.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  width: 55%;
+  opacity: 1;
+  height: 100%;
+  position: absolute;
+  right: 80px;
+  top: 0;
+  background-position: right bottom;
 }
 
 .business-group {
   width: 50%;
-  height: 100% ;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.business-group-inner{
+.business-group-inner {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.business-group-inner>h1 {
+.business-group-inner > h1 {
   font-size: 52px;
   font-weight: 400;
 }
-.counters-box{
+.counters-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.counter-box{
+.counter-box {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 10px;
   width: 50%;
 }
-.counter{
+.counter {
   font-size: 52px;
   font-weight: 400;
 }
-.counter-label{
+.counter-label {
   padding-bottom: 10px;
   border-bottom: 1px solid gray;
 }
 .counter-box button {
   border: 2px solid white;
   background-color: transparent;
-padding: 10px 25px;
-font-size: 20px;
-color: white;
+  padding: 10px 25px;
+  font-size: 20px;
+  color: white;
+}
+
+@media screen and (min-width: 0px) and (max-width: 580px) {
+  .table-container {
+    margin: 0px 5px;
+  }
+  table {
+    padding: 10px;
+    font-size: 14px;
+  }
+  td {
+    padding: 10px 0px;
+  }
+  .Business-content {
+    width: 100%;
+    height: 100%;
+  }
+  .Business-Software {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+    text-align: center;
+  }
+  .business-group {
+    width: 100%;
+    height: 100%;
+  }
+  .Business-Software::after {
+    content: "";
+    display: none;
+  }
+  .business-group-inner{
+    gap: 10px;
+
+  }
+  .business-group-inner>h1{
+    font-size: 28px;
+  }
+  .counters-box{
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .counter-box{
+    flex-direction: column;
+    width: 100%;
+  }
+  br{
+    display: none;
+  }
 }
