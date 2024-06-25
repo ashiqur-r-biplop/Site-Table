@@ -59,12 +59,12 @@ tr:last-child td {
 .Business-Software {
   height: 100vh;
   position: relative;
-  background-color: #0060b4;
+  background-color: #692c8e;
 }
 
 .Business-Software::after {
   content: "";
-  background-image: url(./image/bg-image.png);
+  background-image: url(https://storage.googleapis.com/msgsndr/HYv6J86TQeYnY4sVh4G6/media/667a889134b4a1bf5bf2cb97.png);
   background-repeat: no-repeat;
   background-size: 80%;
   width: 55%;
@@ -119,8 +119,15 @@ tr:last-child td {
   padding: 10px 25px;
   font-size: 20px;
   color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
-
+.counter-box button:hover {
+  border: 2px solid transparent;
+  background-color: white;
+  color: #171717;
+  transition: all 0.5s ease-in-out;
+}
 @media screen and (min-width: 0px) and (max-width: 580px) {
   .table-container {
     margin: 0px 5px;
@@ -150,23 +157,22 @@ tr:last-child td {
     content: "";
     display: none;
   }
-  .business-group-inner{
+  .business-group-inner {
     gap: 10px;
-
   }
-  .business-group-inner>h1{
+  .business-group-inner > h1 {
     font-size: 28px;
   }
-  .counters-box{
+  .counters-box {
     flex-direction: column;
     width: 100%;
     gap: 10px;
   }
-  .counter-box{
+  .counter-box {
     flex-direction: column;
     width: 100%;
   }
-  br{
+  br {
     display: none;
   }
 }
