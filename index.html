@@ -58,9 +58,7 @@
                 </div>
               </div>
               <div class="counter-box">
-                <h1 class="counter">
-                  <span id="Countries-country">12</span>+
-                </h1>
+                <h1 class="counter"><span id="Countries-country">12</span>+</h1>
                 <div class="counter-label">
                   <p>
                     Years In <br />
@@ -95,7 +93,10 @@
               <div class="counter-box">
                 <h1 class="counter"><span>10</span>K+</h1>
                 <div class="counter-label">
-                  <p>New Client <br> In 2023</p>
+                  <p>
+                    New Client <br />
+                    In 2023
+                  </p>
                 </div>
               </div>
               <div class="counter-box">
@@ -147,6 +148,11 @@
       if (target) {
         observer.observe(target);
       }
+      const navigateButton = document.getElementById("navigateButton");
+
+      navigateButton.addEventListener("click", function () {
+        window.location.href = "/about"; 
+      });
     </script>
   </body>
 </html>
