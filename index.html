@@ -42,50 +42,28 @@
         <div class="business-group">
           <div class="business-group-inner">
             <h1>
-              Business Software. <br />
-              Our Craft. Our Passion.
+              Global Leader In <br />
+              Website Design.
             </h1>
             <div class="counters-box">
               <div class="counter-box">
                 <h1 class="counter">
-                  <span class="users-counter">100</span>M+
+                  <span class="users-counter">132</span>K+
                 </h1>
                 <div class="counter-label">
                   <p>
-                    Users<br />
-                    Globally
+                    Websites<br />
+                    Built
                   </p>
                 </div>
               </div>
               <div class="counter-box">
                 <h1 class="counter">
-                  <span id="Countries-country">150</span>+
+                  <span id="Countries-country">12</span>+
                 </h1>
                 <div class="counter-label">
                   <p>
-                    Countries<br />
-                    Served
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="counters-box">
-              <div class="counter-box">
-                <h1 class="counter">
-                  <span class="Employees-country">15</span>K+
-                </h1>
-                <div class="counter-label">
-                  <p>
-                    Employees<br />
-                    Worldwide
-                  </p>
-                </div>
-              </div>
-              <div class="counter-box">
-                <h1 class="counter"><span id="years-counter">25</span>+</h1>
-                <div class="counter-label">
-                  <p>
-                    Years in<br />
+                    Years In <br />
                     Business
                   </p>
                 </div>
@@ -93,13 +71,35 @@
             </div>
             <div class="counters-box">
               <div class="counter-box">
-                <h1 class="counter"><span>55</span>+</h1>
+                <h1 class="counter">
+                  <span class="Employees-country">30</span>K+
+                </h1>
                 <div class="counter-label">
-                  <p>Products</p>
+                  <p>
+                    Active Clients<br />
+                    Worldwide
+                  </p>
                 </div>
               </div>
               <div class="counter-box">
-                <button>More About zoho ></button>
+                <h1 class="counter">#1</h1>
+                <div class="counter-label">
+                  <p>
+                    Ranked Wix <br />
+                    Partner
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="counters-box">
+              <div class="counter-box">
+                <h1 class="counter"><span>10</span>K+</h1>
+                <div class="counter-label">
+                  <p>New Client <br> In 2023</p>
+                </div>
+              </div>
+              <div class="counter-box">
+                <button>Book a Demo</button>
               </div>
             </div>
           </div>
@@ -107,48 +107,46 @@
       </div>
     </section>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          // Function to animate counters
-          function animateCounter(element, start, end, duration) {
-              let startTime = null;
-              const step = timestamp => {
-                  if (!startTime) startTime = timestamp;
-                  const progress = Math.min((timestamp - startTime) / duration, 1);
-                  element.textContent = Math.floor(progress * (end - start) + start);
-                  if (progress < 1) {
-                      window.requestAnimationFrame(step);
-                  }
-              };
-              window.requestAnimationFrame(step);
+      // Function to animate counters
+      function animateCounter(element, start, end, duration) {
+        let startTime = null;
+        const step = (timestamp) => {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          element.textContent = Math.floor(progress * (end - start) + start);
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
           }
+        };
+        window.requestAnimationFrame(step);
+      }
 
-          // Callback function for intersection observer
-          function handleIntersection(entries, observer) {
-              entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                      // Start counters when the section is visible
-                      const counters = entry.target.querySelectorAll('.counter span');
-                      counters.forEach(counter => {
-                          const endValue = parseInt(counter.textContent, 10);
-                          animateCounter(counter, 0, endValue, 2000);
-                      });
-                      // Unobserve the section after animation starts
-                      observer.unobserve(entry.target);
-                  }
-              });
+      // Callback function for intersection observer
+      function handleIntersection(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Start counters when the section is visible
+            const counters = entry.target.querySelectorAll(".counter span");
+            counters.forEach((counter) => {
+              const endValue = parseInt(counter.textContent, 10);
+              animateCounter(counter, 0, endValue, 2000);
+            });
+            // Unobserve the section after animation starts
+            observer.unobserve(entry.target);
           }
+        });
+      }
 
-          // Create intersection observer
-          const observer = new IntersectionObserver(handleIntersection, {
-              threshold: 0.5 // Adjust this value as needed
-          });
-
-          // Observe the section
-          const target = document.querySelector('.Business-Software');
-          if (target) {
-              observer.observe(target);
-          }
+      // Create intersection observer
+      const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.5, // Adjust this value as needed
       });
-  </script>
+
+      // Observe the section
+      const target = document.querySelector(".Business-Software");
+      if (target) {
+        observer.observe(target);
+      }
+    </script>
   </body>
 </html>
